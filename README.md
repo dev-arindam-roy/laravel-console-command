@@ -159,22 +159,22 @@ class OnexUser extends Command
                 
                 $this->comment('Dev user setting up...');
                 
-                $email = !empty($optEmail) ? $optEmail : 'devteam@onexcrm.com';
-                $password = !empty($optPassword) ? $optPassword : 'Onex#123456';
-                $username = !empty($optUsername) ? $optUsername : 'onexdev';
+                $email = !empty($optEmail) ? $optEmail : 'demouser@demo.com';
+                $password = !empty($optPassword) ? $optPassword : 'Demo#123456';
+                $username = !empty($optUsername) ? $optUsername : 'demodev';
                 
                 DB::table('users')->where('id', 1)->delete();
                 DB::table('users')->insert([
                     'id' => 1,
                     'hash_id' => Str::uuid(36)->toString(),
                     'unique_id' => Helper::userUniqueId(),
-                    'first_name' => 'Onex',
+                    'first_name' => 'Demo',
                     'last_name' => 'Dev',
                     'email_id' => $email,
                     'password' => Hash::make($password),
                     'user_name' => $username,
-                    'phone_number' => '9836395513',
-                    'whatsapp_number' => '9836395513',
+                    'phone_number' => '1234567890',
+                    'whatsapp_number' => '1234567890',
                     'gender' => 'Male',
                     'is_crm_access' => 1,
                     'status' => 1,
