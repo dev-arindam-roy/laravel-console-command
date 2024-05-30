@@ -239,3 +239,17 @@ class OnexUser extends Command
 }
 
 ```
+
+## CALL
+```php
+php artisan onex:set-user client --email="democlient123@yopmail.com" --password="Test#1234" --username="demouser123"
+
+php artisan onex:set-user client --email="democlient123@yopmail.com" --password="Test#1234" --username="demouser123" --role=2
+
+php artisan onex:set-user client --entry=10
+
+php artisan onex:set-user dev
+
+php artisan onex:set-user
+
+```
